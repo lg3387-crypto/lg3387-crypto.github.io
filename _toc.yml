@@ -1,0 +1,4 @@
+format: jb-book
+root: index
+chapters:
+  - file: Project 2
