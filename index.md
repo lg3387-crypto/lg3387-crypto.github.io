@@ -1,3 +1,6 @@
-# [Your name]'s Portfolio
+# Dacy's Portfolio
 
-Welcome! Work in progress.
+Welcome! This is my Computing in Context site.
+
+
+

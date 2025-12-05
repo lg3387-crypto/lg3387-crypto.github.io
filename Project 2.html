@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data Sources &#8212; Dacy&#39;s Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Project 2';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="[Your name]’s Portfolio" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Dacy's Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    [Your name]’s Portfolio
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Sources</a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Project 2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Sources</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data Sources</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#make-plots-a-bit-larger-but-still-ok-on-an-11-laptop">Make plots a bit larger but still OK on an 11” laptop</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-and-selecting-variables">Cleaning and Selecting Variables</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-columns-to-be-sure-of-names">Inspect columns to be sure of names</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#depending-on-the-exact-column-names-adjust-these">Depending on the exact column names, adjust these:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#here-i-assume-owid-s-standard-naming-pattern">Here I assume OWID’s standard naming pattern.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-aggregate-regions-world-continents-etc-they-have-missing-country-code">Drop aggregate regions (World, continents, etc.) – they have missing country code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-the-two-datasets">Merging the Two Datasets</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-rows-with-missing-values-in-either-column">Drop rows with missing values in either column</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-year-for-the-main-visualization">Choosing a Year for the Main Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-renewables-vs-per-capita-emissions">Visualization: Renewables vs. Per-Capita Emissions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-add-a-simple-trend-line-still-computed-from-the-data-no-hard-coding">Optional: add a simple trend line (still computed from the data, no hard-coding)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-the-relationship">Interpreting the Relationship</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-and-next-steps">Limitations and Next Steps</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Project 2 – Do More Renewables Mean Lower Per-Capita Emissions?</span>
+<span class="c1">## *Author: linxgin Guo </span>
+<span class="c1">##Course: Computing in Context – Project 2*  </span>
+
+<span class="c1">## In this project, I explore the relationship between countries’ **use of renewable energy** and their **greenhouse gas (GHG) emissions per person**.  </span>
+
+<span class="c1">## The guiding questions are:</span>
+
+<span class="c1">##1. Are countries that rely more on renewable energy associated with **lower per-capita GHG emissions**?</span>
+<span class="c1">## 2. Are there visible regional patterns in this relationship?</span>
+
+<span class="c1">## My hypothesis is that, *controlling loosely for development level*, countries with a **higher share of renewables** in their energy mix tend to have **lower GHG emissions per capita** , but there will be notable exceptions.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="data-sources">
+<h1>Data Sources<a class="headerlink" href="#data-sources" title="Link to this heading">#</a></h1>
+<p>For this project, I use <strong>two separate datasets</strong> from <a class="reference external" href="https://ourworldindata.org/">Our World in Data</a>:</p>
+<ol class="arabic simple">
+<li><p><strong>Per-capita greenhouse gas emissions</strong></p>
+<ul class="simple">
+<li><p>Data page: “Per capita greenhouse gas emissions” (Jones et al. 2024). :contentReference[oaicite:0]{index=0}</p></li>
+<li><p>Downloaded via the grapher endpoint:<br />
+<code class="docutils literal notranslate"><span class="pre">https://ourworldindata.org/grapher/per-capita-ghg-emissions.csv</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Share of primary energy consumption from renewable sources</strong></p>
+<ul class="simple">
+<li><p>Data page: “Share of primary energy consumption that comes from renewables”. :contentReference[oaicite:1]{index=1}</p></li>
+<li><p>Downloaded via:<br />
+<code class="docutils literal notranslate"><span class="pre">https://ourworldindata.org/grapher/renewable-share-energy.csv</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>Both datasets are structured in the usual Our World in Data format: one row per <strong>location–year</strong> pair, with a value column for the indicator of interest. I treat them as two independent datasets and merge them using <strong>country code</strong> and <strong>year</strong>.</p>
+<p>import pandas as pd
+import matplotlib.pyplot as plt</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="make-plots-a-bit-larger-but-still-ok-on-an-11-laptop">
+<h1>Make plots a bit larger but still OK on an 11” laptop<a class="headerlink" href="#make-plots-a-bit-larger-but-still-ok-on-an-11-laptop" title="Link to this heading">#</a></h1>
+<p>plt.rcParams[“figure.figsize”] = (8, 6)</p>
+<p>ghg_url = “<a class="reference external" href="https://ourworldindata.org/grapher/per-capita-ghg-emissions.csv">https://ourworldindata.org/grapher/per-capita-ghg-emissions.csv</a>”
+renew_url = “<a class="reference external" href="https://ourworldindata.org/grapher/renewable-share-energy.csv">https://ourworldindata.org/grapher/renewable-share-energy.csv</a>”</p>
+<p>ghg_raw = pd.read_csv(ghg_url)
+renew_raw = pd.read_csv(renew_url)</p>
+<p>ghg_raw.head(), renew_raw.head()</p>
+<section id="cleaning-and-selecting-variables">
+<h2>Cleaning and Selecting Variables<a class="headerlink" href="#cleaning-and-selecting-variables" title="Link to this heading">#</a></h2>
+<p>Both CSVs contain three key identifier columns:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Entity</span></code> – country or world region name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Code</span></code> – 3-letter country code (blank for aggregates like “World”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Year</span></code> – calendar year</p></li>
+</ul>
+<p>Each file also includes one value column:</p>
+<ul class="simple">
+<li><p>In the GHG dataset, the value is <strong>per-capita GHG emissions</strong> (tonnes of CO₂-equivalents per person).</p></li>
+<li><p>In the renewables dataset, the value is the <strong>share of primary energy from renewables</strong> (percent).</p></li>
+</ul>
+<p>To focus on comparable country-level data, I:</p>
+<ol class="arabic simple">
+<li><p><strong>Drop aggregate regions</strong> (rows without a 3-letter country code).</p></li>
+<li><p>Keep only the columns I need.</p></li>
+<li><p>Rename the value columns to descriptive variable names.</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="inspect-columns-to-be-sure-of-names">
+<h1>Inspect columns to be sure of names<a class="headerlink" href="#inspect-columns-to-be-sure-of-names" title="Link to this heading">#</a></h1>
+<p>print(“GHG columns:”, ghg_raw.columns.tolist())
+print(“Renewables columns:”, renew_raw.columns.tolist())</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="depending-on-the-exact-column-names-adjust-these">
+<h1>Depending on the exact column names, adjust these:<a class="headerlink" href="#depending-on-the-exact-column-names-adjust-these" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="here-i-assume-owid-s-standard-naming-pattern">
+<h1>Here I assume OWID’s standard naming pattern.<a class="headerlink" href="#here-i-assume-owid-s-standard-naming-pattern" title="Link to this heading">#</a></h1>
+<p>ghg = ghg_raw.rename(
+columns={
+“Entity”: “country”,
+“Code”: “code”,
+“Year”: “year”,
+ghg_raw.columns[3]: “ghg_per_capita”  # value column
+}
+)[[“country”, “code”, “year”, “ghg_per_capita”]]</p>
+<p>renew = renew_raw.rename(
+columns={
+“Entity”: “country”,
+“Code”: “code”,
+“Year”: “year”,
+renew_raw.columns[3]: “renew_share”  # value column
+}
+)[[“country”, “code”, “year”, “renew_share”]]</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="drop-aggregate-regions-world-continents-etc-they-have-missing-country-code">
+<h1>Drop aggregate regions (World, continents, etc.) – they have missing country code<a class="headerlink" href="#drop-aggregate-regions-world-continents-etc-they-have-missing-country-code" title="Link to this heading">#</a></h1>
+<p>ghg = ghg.dropna(subset=[“code”])
+renew = renew.dropna(subset=[“code”])</p>
+<p>ghg.head(), renew.head()</p>
+<section id="merging-the-two-datasets">
+<h2>Merging the Two Datasets<a class="headerlink" href="#merging-the-two-datasets" title="Link to this heading">#</a></h2>
+<p>To study a relationship, I need observations where <strong>both</strong> indicators are available in the <strong>same year and country</strong>.</p>
+<p>I merge the datasets on <code class="docutils literal notranslate"><span class="pre">code</span></code> and <code class="docutils literal notranslate"><span class="pre">year</span></code>, keeping only rows where both variables are non-missing. This gives me a panel dataset with:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ghg_per_capita</span></code> – tonnes CO₂-eq per person</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">renew_share</span></code> – % of primary energy from renewables</p></li>
+</ul>
+<p>merged = pd.merge(
+ghg,
+renew,
+on=[“code”, “year”],
+suffixes=(“_ghg”, “_renew”)
+)</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="drop-rows-with-missing-values-in-either-column">
+<h1>Drop rows with missing values in either column<a class="headerlink" href="#drop-rows-with-missing-values-in-either-column" title="Link to this heading">#</a></h1>
+<p>merged = merged.dropna(subset=[“ghg_per_capita”, “renew_share”])</p>
+<p>print(“Number of country-year observations:”, len(merged))
+merged.head()</p>
+<section id="choosing-a-year-for-the-main-visualization">
+<h2>Choosing a Year for the Main Visualization<a class="headerlink" href="#choosing-a-year-for-the-main-visualization" title="Link to this heading">#</a></h2>
+<p>Our World in Data spans several decades. To make a <strong>single, readable visualization</strong>, I focus on <strong>the most recent year</strong> where many countries have data for both variables.</p>
+<p>I:</p>
+<ol class="arabic simple">
+<li><p>Look at the distribution of years in the merged data.</p></li>
+<li><p>Pick the latest year with a reasonably large number of countries.</p></li>
+<li><p>Filter the dataset to that year for the main scatter plot.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check how many observations we have by year</span>
+<span class="n">year_counts</span> <span class="o">=</span> <span class="n">merged</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">year_counts</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick the latest year with at least, say, 80 countries</span>
+<span class="n">candidate_years</span> <span class="o">=</span> <span class="n">year_counts</span><span class="p">[</span><span class="n">year_counts</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">]</span>
+<span class="n">latest_year</span> <span class="o">=</span> <span class="n">candidate_years</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">latest_year</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>latest = merged[merged[“year”] == latest_year].copy()
+print(latest_year, latest.shape)
+latest.head()</p>
+</section>
+<section id="visualization-renewables-vs-per-capita-emissions">
+<h2>Visualization: Renewables vs. Per-Capita Emissions<a class="headerlink" href="#visualization-renewables-vs-per-capita-emissions" title="Link to this heading">#</a></h2>
+<p>Now I create a <strong>scatter plot</strong> where each point is a country in the chosen year:</p>
+<ul class="simple">
+<li><p><strong>X-axis:</strong> Share of primary energy from renewables (<code class="docutils literal notranslate"><span class="pre">renew_share</span></code>, in %)</p></li>
+<li><p><strong>Y-axis:</strong> Per-capita GHG emissions (<code class="docutils literal notranslate"><span class="pre">ghg_per_capita</span></code>, tonnes CO₂-eq per person)</p></li>
+</ul>
+<p>This single chart combines both datasets and lets us see whether higher use of renewables is associated with lower emissions per person.</p>
+<p>fig, ax = plt.subplots()</p>
+<p>ax.scatter(latest[“renew_share”], latest[“ghg_per_capita”], alpha=0.7)</p>
+<p>ax.set_title(
+f”Renewables vs. Per-Capita GHG Emissions, {latest_year}”
+)
+ax.set_xlabel(“Share of primary energy from renewables (%)”)
+ax.set_ylabel(“Per-capita GHG emissions (tonnes CO₂-eq per person)”)</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="optional-add-a-simple-trend-line-still-computed-from-the-data-no-hard-coding">
+<h1>Optional: add a simple trend line (still computed from the data, no hard-coding)<a class="headerlink" href="#optional-add-a-simple-trend-line-still-computed-from-the-data-no-hard-coding" title="Link to this heading">#</a></h1>
+<p>m, b = np.polyfit(latest[“renew_share”], latest[“ghg_per_capita”], 1)
+x_vals = pd.Series(sorted(latest[“renew_share”]))
+ax.plot(x_vals, m * x_vals + b)</p>
+<p>plt.tight_layout()
+plt.show()</p>
+<p>import numpy as np</p>
+<section id="interpreting-the-relationship">
+<h2>Interpreting the Relationship<a class="headerlink" href="#interpreting-the-relationship" title="Link to this heading">#</a></h2>
+<p>Visually, I look for:</p>
+<ul class="simple">
+<li><p>Whether high-renewables countries tend to sit at <strong>lower</strong> levels of per-capita emissions.</p></li>
+<li><p>Whether there is a strong linear pattern or only a loose cloud of points.</p></li>
+<li><p>Outliers – countries with high renewables but still high emissions, or vice versa.</p></li>
+</ul>
+<p>To quantify the relationship, I also compute the <strong>Pearson correlation coefficient</strong> between the two variables.</p>
+<p>corr = latest[“renew_share”].corr(latest[“ghg_per_capita”])
+corr</p>
+<p>In my dataset for <strong></strong>, the correlation between renewable share and per-capita GHG emissions is approximately <strong><code class="docutils literal notranslate"><span class="pre">&lt;insert</span> <span class="pre">value</span> <span class="pre">from</span> <span class="pre">cell</span> <span class="pre">above&gt;</span></code></strong>.</p>
+<ul class="simple">
+<li><p>A <strong>negative</strong> value would suggest that, on average, countries with higher shares of renewables emit <strong>less</strong> per person.</p></li>
+<li><p>A correlation close to <strong>zero</strong> would mean the relationship is weak or noisy in this simple bivariate view.</p></li>
+</ul>
+<p>Looking at the scatter plot, I observe that:</p>
+<ul class="simple">
+<li><p>&lt;Write in your own words: e.g., “Many European countries cluster at moderate emissions and mid-to-high renewables, while some fossil-fuel-exporting countries show very high emissions and low renewables.”&gt;</p></li>
+<li><p>&lt;Comment on any clear outliers or regional patterns you notice.&gt;</p></li>
+</ul>
+</section>
+<section id="limitations-and-next-steps">
+<h2>Limitations and Next Steps<a class="headerlink" href="#limitations-and-next-steps" title="Link to this heading">#</a></h2>
+<p>This quick analysis has several limitations:</p>
+<ul class="simple">
+<li><p><strong>Correlation is not causation.</strong> Countries with high renewables and low emissions might also differ in income level, industry structure, or climate policy – none of which I control for here.</p></li>
+<li><p><strong>Measurement differences.</strong> GHG emissions include all sectors, while renewable share focuses on <strong>primary energy</strong>; the link between the two is indirect. :contentReference[oaicite:2]{index=2}</p></li>
+<li><p><strong>Data gaps.</strong> Some countries are missing from one or both datasets in the chosen year, which may bias the sample toward data-rich countries.</p></li>
+<li><p><strong>No time dynamics.</strong> Looking at only one year ignores how countries’ energy systems have evolved over time.</p></li>
+</ul>
+<p>If I had more time, I would:</p>
+<ul class="simple">
+<li><p>Explore the <strong>time series</strong> dimension (e.g., how changes in renewables relate to changes in emissions).</p></li>
+<li><p>Group countries by <strong>income level</strong> or <strong>region</strong> to see whether the relationship differs for high-income vs. low-income countries.</p></li>
+<li><p>Add more variables, such as electricity mix or energy intensity, to better explain outliers.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">[Your name]’s Portfolio</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data Sources</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#make-plots-a-bit-larger-but-still-ok-on-an-11-laptop">Make plots a bit larger but still OK on an 11” laptop</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-and-selecting-variables">Cleaning and Selecting Variables</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-columns-to-be-sure-of-names">Inspect columns to be sure of names</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#depending-on-the-exact-column-names-adjust-these">Depending on the exact column names, adjust these:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#here-i-assume-owid-s-standard-naming-pattern">Here I assume OWID’s standard naming pattern.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-aggregate-regions-world-continents-etc-they-have-missing-country-code">Drop aggregate regions (World, continents, etc.) – they have missing country code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-the-two-datasets">Merging the Two Datasets</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-rows-with-missing-values-in-either-column">Drop rows with missing values in either column</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-year-for-the-main-visualization">Choosing a Year for the Main Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-renewables-vs-per-capita-emissions">Visualization: Renewables vs. Per-Capita Emissions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-add-a-simple-trend-line-still-computed-from-the-data-no-hard-coding">Optional: add a simple trend line (still computed from the data, no hard-coding)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-the-relationship">Interpreting the Relationship</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-and-next-steps">Limitations and Next Steps</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dacy
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
